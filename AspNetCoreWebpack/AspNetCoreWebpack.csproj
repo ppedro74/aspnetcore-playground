@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
+  
+  <Target Name="RunBuildDebug" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' ">
+    <Exec Command="yarn run build" />
+  </Target>
+
+  <Target Name="RunBuildProd" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+    <Exec Command="yarn run build_prod" />
+  </Target>
 
 </Project>

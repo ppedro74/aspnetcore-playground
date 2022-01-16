@@ -18,13 +18,17 @@ gulp.task('webpack-watch', function (cb) {
     //    cb(code);
     //});
 
-    exec('yarn run watch', (err, stdout, stderr) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        console.log(stdout);
-    });
+    if (false) {
+        exec('yarn run watch', (err, stdout, stderr) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log(stdout);
+        });
 
+    }
+
+    cb();
 });
 

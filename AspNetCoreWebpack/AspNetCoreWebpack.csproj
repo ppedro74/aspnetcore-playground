@@ -13,4 +13,12 @@
     <Exec Command="yarn run build_prod" />
   </Target>
 
+  <ItemGroup>
+    <None Remove="src\shared\foo.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\shared\foo.d.ts" />
+  </ItemGroup>
+
 </Project>
